@@ -4,13 +4,14 @@ void setup() {
 }
 
 void draw(){
+
   //drawARandomCircle();
   //if(mousePressed){
     //drawACircleAt(mouseX, mouseY);
   
   centerSquare(); //run void centerSquare
   circle(); //run void circle
-  randomCircle(); //run void random circle
+  lines();
   }
   
  
@@ -30,19 +31,19 @@ void draw(){
 
 void centerSquare(){ //creates square function
   fill(0,0,random(255)); //random blue
+  noStroke();
   rect(175,175,50,50); //set rectangle size and position
 }
 
 void circle(){ //creates circle function
   fill(random(0,255),0,0); //set color to random red
+  noStroke();
   ellipse(mouseX,mouseY,30,30); //set size and position
 }
 
-void randomCircle(){ //creates random circle function
- 
-  fill(0,random(255),0); //set color to random green
-  float rad = random(10,40); //declare and initialize variable 
-  
-  ellipse(random(width),random(height),rad,rad); //set circle size and position
+void lines(){ //create line function
+  stroke(0,random(255),0); //set stroke to green
+  float x = random(0,400); /
+  line(x,0,x +5,height);
   
 }
